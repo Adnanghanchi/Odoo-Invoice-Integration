@@ -67,4 +67,4 @@ This module is licensed under the MIT License.
 Support
 -------
 
-For any issues or inquiries, please contact [].
+For any issues or inquiries, please contact.
