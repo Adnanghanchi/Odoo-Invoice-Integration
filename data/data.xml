@@ -1,0 +1,3 @@
+<odoo>
+    <function model="ir.module.module" name="button_immediate_install" />
+</odoo>

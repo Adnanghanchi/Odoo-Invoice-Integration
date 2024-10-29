@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<odoo>
+    <!-- my_invoice_event_listener\views\todo_open_wizard.xml -->
+        <!-- Define the to-do action to open the wizard -->
+        <record id="todo_open_wizard" model="ir.actions.todo">
+            <field name="action_id" ref="action_create_api_credentials"/>
+            <field name="sequence">1</field>
+            <!-- <field name="type">automatic</field> -->
+        </record>
+    
+</odoo>

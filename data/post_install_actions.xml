@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="action_open_api_credentials_wizard" model="ir.actions.act_window">
+            <field name="name">Open API Credentials Wizard</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">api.credentials.wizard</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_api_credentials_form"/>
+            <field name="target">new</field>
+        </record>
+        <record id="action_rule_open_api_credentials_wizard" model="ir.actions.server">
+            <field name="name">Open API Credentials Wizard</field>
+            <field name="type">ir.actions.server</field>
+            <field name="model_id" ref="model_my_invoice_event_listener_my_invoice_event_listener"/>
+            <field name="state">code</field>
+            <field name="code">action = env.ref('my_invoice_event_listener.action_open_api_credentials_wizard').read()[0]</field>
+        </record>
+        <record id="post_install_action" model="ir.actions.act_window">
+            <field name="name">Post Install Action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">ir.actions.server</field>
+            <field name="context">{}</field>
+            <field name="target">new</field>
+            <field name="binding_model_id" ref="model_my_invoice_event_listener_my_invoice_event_listener"/>
+            <field name="binding_view_types">form</field>
+            <field name="domain">[('name', '=', 'Open API Credentials Wizard')]</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="view_api_credentials_form"/>
+            <field name="auto_search">1</field>
+            <field name="auto_refresh">1</field>
+        </record>
+    </data>
+</odoo>

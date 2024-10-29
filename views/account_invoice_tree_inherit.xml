@@ -1,0 +1,19 @@
+<!-- views/account_invoice_tree.xml -->
+
+<odoo>
+    <data>
+
+        <!-- Associate the action with a button or field in your view -->
+        <record id="account_invoice_tree_inherit" model="ir.ui.view">
+            <field name="name">account.invoice.tree.inherit</field>
+            <field name="model">account.move</field>
+            <field name="inherit_id" ref="account.view_invoice_tree" />
+            <field name="arch" type="xml">
+                <xpath expr="//tree" position="inside">
+                    <field name="invoice_no"/>
+                </xpath>
+            </field>
+        </record>
+
+    </data>
+</odoo>
