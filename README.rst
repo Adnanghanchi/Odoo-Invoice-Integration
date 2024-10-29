@@ -1,4 +1,4 @@
-.. image:: images\SADAD.png
+.. image:: images/SADAD.png
    :align: center
 
 # Sadad Integration Module for Odoo (Qatar)
@@ -17,7 +17,7 @@ Images
 .. image:: images/wizard.png
    :align: center
 
-.. image:: images/Invocie.png
+.. image:: images/Invoice.png
    :align: center
 
 Features
